@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <title >chrome easter egg: t-rex runner</title>
+    <title >t-rex-runner</title>
+    <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Hello World</h1>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='index.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
@@ -12,12 +13,11 @@
 
 <body id="t" class="offline">
     <div id="messageBox" class="sendmessage">
-         <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Press Space to start</h1>
          <div class="niokbutton" onclick="okbuttonsend()"></div>
     </div>
     <div id="main-frame-error" class="interstitial-wrapper">
         <div id="main-content">
-            Zone: {{zone}}
+            Hostname: {{hostname}}
             <div class="icon icon-offline" alt=""></div>
         </div>
         <div id="offline-resources">

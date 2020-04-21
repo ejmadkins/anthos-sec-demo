@@ -36,3 +36,7 @@ spec:
         image: gcr.io/GOOGLE_CLOUD_PROJECT/t-rex-app@DIGEST
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            cpu: "100m"
+            memory: "2Gi"

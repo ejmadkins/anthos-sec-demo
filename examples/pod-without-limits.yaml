@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-without-limits
+spec:
+  containers:
+  - name: pod-without-limits
+    image: nginx
+    securityContext:
+      privileged: true #false
+#    resources:
+#      limits:
+#    cpu: "200m"
+#    memory: "1Gi"

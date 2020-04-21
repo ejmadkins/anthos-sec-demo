@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: direct-pod
+spec:
+  containers:
+  - name: direct-pod
+    image: nginx
+    securityContext:
+      privileged: true #false
+    resources:
+      limits:
+        cpu: "200m"
+        memory: "1Gi"

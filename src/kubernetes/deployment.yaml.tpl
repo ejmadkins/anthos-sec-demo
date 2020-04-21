@@ -40,3 +40,6 @@ spec:
           limits:
             cpu: "100m"
             memory: "2Gi"
+        securityContext:
+          runAsUser: 2000
+          allowPrivilegeEscalation: false

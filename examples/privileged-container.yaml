@@ -4,6 +4,8 @@ metadata:
   name: nginx-privileged
   labels:
     app: nginx-privileged
+  annotations:
+    alpha.image-policy.k8s.io/break-glass: "true"
 spec:
   containers:
   - name: nginx

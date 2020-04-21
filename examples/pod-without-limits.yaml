@@ -1,16 +1,32 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: pod-without-limits
-  annotations:
-    alpha.image-policy.k8s.io/break-glass: "true"
+  namespace: pod-without-limits
+  labels:
+    app: pod-without-limits
 spec:
-  containers:
-  - name: pod-without-limits
-    image: nginx
-    securityContext:
-      privileged: true #false
-#    resources:
-#      limits:
-#    cpu: "200m"
-#    memory: "1Gi"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-without-limits
+  template:
+    metadata:
+      labels:
+        app: pod-without-limits
+      annotations:
+        alpha.image-policy.k8s.io/break-glass: "true"
+    spec:
+      containers:
+      - name: pod-without-limits
+        image: nginx
+        ports:
+        - containerPort: 8080
+        # resources:
+        #   limits:
+        #     cpu: "100m"
+        #     memory: "2Gi"
+        securityContext:
+          runAsUser: 2000
+          allowPrivilegeEscalation: false
+          privileged: false

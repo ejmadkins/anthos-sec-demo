@@ -18,12 +18,12 @@ spec:
     spec:
       containers:
       - name: pod-without-limits
-        image: nginx
+        image: gcr.io/anthos-customer-demos/hello-app:35f08e2
         ports:
         - containerPort: 8080
         # resources:
         #   limits:
-        #     cpu: "200m"
+        #     cpu: "100m"
         #     memory: "1Gi"
         securityContext:
           runAsUser: 2000

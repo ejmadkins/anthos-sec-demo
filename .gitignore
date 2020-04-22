@@ -38,4 +38,3 @@ Thumbs.db
 destroy.sh
 bin-auth-demo.sh
 anthos-sec-demo*
-binauthz-policy.yaml

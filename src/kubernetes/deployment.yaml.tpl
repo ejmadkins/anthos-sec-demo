@@ -43,3 +43,4 @@ spec:
         securityContext:
           runAsUser: 2000
           allowPrivilegeEscalation: false
+          privileged: false

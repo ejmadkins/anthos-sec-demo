@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: direct-pod
-        image: nginx
+        image: gcr.io/anthos-customer-demos/hello-app:35f08e2
         ports:
         - containerPort: 8080
         resources:

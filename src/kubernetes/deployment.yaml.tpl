@@ -39,7 +39,7 @@ spec:
         resources:
           limits:
             cpu: "100m"
-            memory: "2Gi"
+            memory: "1Gi"
         securityContext:
           runAsUser: 2000
           allowPrivilegeEscalation: false

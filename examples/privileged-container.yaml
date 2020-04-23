@@ -27,5 +27,5 @@ spec:
             memory: "1Gi"
         securityContext:
           runAsUser: 2000
-          allowPrivilegeEscalation: true #false
-          privileged: true #false
+          allowPrivilegeEscalation: true
+          privileged: true

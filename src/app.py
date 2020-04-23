@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def t_rex_runner():
-    return render_template('index.html', cluster_name=get_cluster_name_metadata())
+    return render_template('index.html', hostname=get_cluster_name_metadata())
 
-def get_cluster_name_metadata():
-    return requests.get("http://metadata/computeMetadata/v1/instance/cluster-name",
+def hostname_metadata():
+    return requests.get("http://metadata/computeMetadata/v1/instance/name",
         headers={'Metadata-Flavor': 'Google'}).text
 
 if __name__ == '__main__':

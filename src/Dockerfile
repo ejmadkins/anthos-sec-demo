@@ -1,4 +1,4 @@
-FROM python:3.7-stretch
+FROM marketplace.gcr.io/google/debian9:latest
 #FROM python:3.7-alpine
 COPY . /app
 WORKDIR /app
